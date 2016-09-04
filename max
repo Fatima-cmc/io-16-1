@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int max(int *buf, int m)
+{	
+	int first;
+	first=buf[0];
+	for(int i=1;i<m;i++)
+	{
+		if(buf[i]>first)
+		first=buf[i];
+	}
+
+	return first;
+}
+int main()
+{
+	int *array;
+	int n;
+	cin>>n;
+	array=new int[n];
+	for(int i=0;i<n;i++)
+		cin>>array[i];
+	cout<<max(array,n)<<endl;
+	return 0;
+}
+	
